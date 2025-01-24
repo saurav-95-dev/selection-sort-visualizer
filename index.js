@@ -1,4 +1,10 @@
 const container = document.querySelector(".data-container");
+const themeButton = document.getElementsByClassName("theme-btn")[0];
+const bodyContainer = document.getElementsByClassName("body-container");
+const resetButton = document.getElementsByClassName("reset-btn")[0];
+console.log(resetButton);
+console.log(bodyContainer);
+console.log(themeButton);
 
 // function to generate bars
 function generatebars(num = 20) {
@@ -132,3 +138,34 @@ function disable() {
   document.getElementById("Button2").disabled = true;
   document.getElementById("Button2").style.backgroundColor = "#d8b6ff";
 }
+
+ themeButton.textContent="black"
+
+//........................................................
+//Toggle theme functionality : 
+themeButton.addEventListener("click", () => {
+   
+  for (let i = 0; i < bodyContainer.length; i++){
+    if (bodyContainer[i].style.backgroundColor == "white" || bodyContainer[i].style.backgroundColor == "") {
+      bodyContainer[i].style.backgroundColor = "#343434";
+      themeButton.style.backgroundColor = "white";
+      themeButton.style.color = "black";
+      themeButton.textContent = "Light"
+      resetButton.style.backgroundColor = "#7CFC00";
+    }
+    else {
+      bodyContainer[i].style.backgroundColor = "white";
+      themeButton.style.backgroundColor = "black";
+      themeButton.style.color = "white";
+      themeButton.textContent="Black"
+      resetButton.style.backgroundColor = "rgb(243, 147, 73)";
+    }
+
+  }
+})
+
+//Reset button : 
+resetButton.addEventListener("click", () => {
+  location.reload();
+
+})
