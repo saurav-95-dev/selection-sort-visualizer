@@ -139,7 +139,7 @@ function disable() {
   document.getElementById("Button2").style.backgroundColor = "#d8b6ff";
 }
 
- themeButton.textContent="black"
+ themeButton.textContent="Turn Black"
 
 //........................................................
 //Toggle theme functionality : 
@@ -150,14 +150,14 @@ themeButton.addEventListener("click", () => {
       bodyContainer[i].style.backgroundColor = "#343434";
       themeButton.style.backgroundColor = "white";
       themeButton.style.color = "black";
-      themeButton.textContent = "Light"
+      themeButton.textContent = "Turn Light"
       resetButton.style.backgroundColor = "#7CFC00";
     }
     else {
       bodyContainer[i].style.backgroundColor = "white";
       themeButton.style.backgroundColor = "black";
       themeButton.style.color = "white";
-      themeButton.textContent="Black"
+      themeButton.textContent="Turn Black"
       resetButton.style.backgroundColor = "rgb(243, 147, 73)";
     }
 
